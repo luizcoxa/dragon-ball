@@ -1,0 +1,94 @@
+/* Estilo para a seção de contato */
+#contact {
+    background:linear-gradient(90deg, #fffb00, #ff0000,#ffbb00);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-content {
+    max-width: 800px;
+    width: 80%; /* Define a largura para 80% */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.intro-text-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha ao centro */
+    width: 100%;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 600px; /* Limita a expansão lateral */
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%; /* Ajusta para ocupar 100% da largura do container */
+    max-width: 800px; /* Limita a expansão lateral */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+#message {
+    resize: vertical; /* Permite redimensionamento apenas na vertical */
+}
+
+.form-group button {
+    background-color: #000; /* Cor preta para o botão */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #333;
+}

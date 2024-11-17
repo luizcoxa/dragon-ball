@@ -1,0 +1,97 @@
+/* Estilos para a Seção Inicial */
+#inicial {
+    position: relative;
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/dragao2.jpg); /* Caminho para a imagem */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    overflow: hidden;
+}
+
+/* Gradiente animado sobre a imagem */
+#inicial::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 165, 0, 0.4) 60%, rgba(255, 69, 0, 0.4) 100%);
+    animation: fundoAnimado 10s infinite alternate;
+    z-index: 1; /* Fica acima da imagem */
+    opacity: 0.8; /* Torna o gradiente mais transparente */
+}
+
+/* Animação do gradiente */
+@keyframes fundoAnimado {
+    0% {
+        background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 0%, rgba(255, 69, 0, 0.4) 60%, rgba(255, 0, 0, 0.4) 100%);
+    }
+    50% {
+        background: radial-gradient(circle, rgba(255, 69, 0, 0.4) 0%, rgba(255, 0, 0, 0.4) 60%, rgba(255, 165, 0, 0.4) 100%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 165, 0, 0.4) 60%, rgba(255, 69, 0, 0.4) 100%);
+    }
+}
+
+/* Conteúdo dentro da seção */
+.conteudo-inicial {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima do gradiente */
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start; /* Move o conteúdo para o início */
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff; /* Cor do texto para contraste com a imagem */
+    gap: 20px; /* Espaçamento entre elementos */
+    padding-left: 50px; /* Move o conteúdo para o lado */
+}
+
+/* Estilo da descrição */
+.descricao {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 10px;
+    text-align: left;
+    margin-right: auto; /* Move mais para o lado esquerdo */
+    
+}
+
+.descricao h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.descricao p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo-inicial {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 20px; /* Ajusta o espaçamento em telas menores */
+    }
+
+    .descricao {
+        max-width: 90%;
+        padding: 15px;
+        margin-right: 0; /* Centraliza em dispositivos menores */
+    }
+}

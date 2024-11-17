@@ -1,0 +1,75 @@
+/* Estilo para a barra de navegação */
+header {
+    background: linear-gradient(90deg, #FF7F00, #FF4500, #FF0000); /* Gradiente inspirado no tema Dragon Ball */
+    padding: 5px 0; /* Diminui o padding da barra de navegação */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 50px 50px; /* Bordas inferiores arredondadas */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 50px !important; /* Define a largura da logo */
+    height: 50px !important; /* Define a altura da logo */
+    border-radius: 20% !important; /* Arredonda as bordas */
+    object-fit: cover !important; /* Garante que a imagem preencha o espaço */
+    object-position: center !important; /* Centraliza a imagem */
+    margin-left: 40px; /* Afasta a logo um pouco do canto esquerdo */
+}
+
+
+/* Estilo para os itens de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Menor espaçamento entre os itens */
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff; /* Texto branco */
+    font-size: 1rem; /* Tamanho de fonte reduzido */
+    padding: 5px 15px; /* Menor espaçamento nas laterais */
+    border-radius: 20px; /* Bordas arredondadas */
+    transition: background 0.3s, transform 0.3s;
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Leve aumento */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.4); /* Efeito de brilho no hover */
+}
+
+/* Efeito de linha animada */
+nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s, left 0.3s;
+    border-radius: 50px;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
